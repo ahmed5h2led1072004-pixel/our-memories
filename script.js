@@ -1,4 +1,4 @@
-const PASSWORD = "1234"; // ضع الباسورد هنا
+const PASSWORD = "972025"; // ضع الباسورد هنا
 
 // العناصر
 const screens = document.querySelectorAll(".screen");
