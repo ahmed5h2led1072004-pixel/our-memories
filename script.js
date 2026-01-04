@@ -1,15 +1,30 @@
+const PASSWORD = "1234"; // ضع الباسورد هنا
+
+// العناصر
+const screens = document.querySelectorAll(".screen");
+const passwordInput = document.getElementById("password");
+const errorMsg = document.getElementById("error");
+const screen2 = document.getElementById("screen2");
+const screen3 = document.getElementById("screen3");
+
+// دالة لتفعيل الشاشة
+function showScreen(screen) {
+  screens.forEach(s => s.classList.remove("active"));
+  screen.classList.add("active");
+}
+
+// فحص الباسورد
 function checkPassword() {
-    const passwordInput = document.getElementById('password').value;
-    const error = document.getElementById('error');
-    const loginContainer = document.getElementById('login-container');
-    const content = document.getElementById('content');
+  const input = passwordInput.value.trim();
+  if(input === PASSWORD){
+    errorMsg.textContent = "";
+    showScreen(screen2);
+  } else {
+    errorMsg.textContent = "الباسورد غلط 😢";
+  }
+}
 
-    const correctPassword = "972025"; // هنا حط الباسورد اللي تحبه
-
-    if (passwordInput === correctPassword) {
-        loginContainer.style.display = "none";
-        content.style.display = "block";
-    } else {
-        error.textContent = "الباسورد خطأ 😢 حاول مرة تانية";
-    }
+// الانتقال لشاشة الصور
+function goToGallery() {
+  showScreen(screen3);
 }

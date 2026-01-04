@@ -1,49 +1,111 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <title>ذكرياتنا 💖</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>ذكرياتنا ❤️</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- صفحة الباسورد -->
-    <div class="login-container" id="login-container">
-        <h2>ادخل الباسورد لفتح ذكرياتنا</h2>
-        <input type="password" id="password" placeholder="الباسورد">
-        <button onclick="checkPassword()">فتح</button>
-        <p id="error" class="error"></p>
+
+<!-- القلوب المتحركة -->
+<div class="hearts"></div>
+
+<!-- موسيقى هادية -->
+<audio controls autoplay loop >
+    <source src="Assala - Ah Men Ainah _ أصاله - أه من عيناه(MP3_160K).mp3" type="audio/mpeg">
+    <SOUrce src="Assala - Ah Men Ainah _ أصاله - أه من عيناه(MP3_160K).wav" type="audio/wav">
+    <source src="Assala - Ah Men Ainah _ أصاله - أه من عيناه(MP3_160K).ogg" type="audio/ogg">
+</audio>
+
+<!-- شاشة الباسورد -->
+<div class="screen active" id="screen1">
+  <h2> زكرياتنا ينن عيون احمد🥺</h2>
+  <input type="password" id="password" placeholder="اكتبي الباسورد">
+  <p id="error" style="color:red; margin-top:10px;"></p>
+  <button onclick="checkPassword()">يلا بينا نبدا ينن عيوني</button>
+</div>
+
+<!-- شاشة رسالة الحب -->
+<div class="screen" id="screen2">
+  <div class="love-box">
+    <h2>إنتي الأمان ❤️</h2>
+    <p>كل لحظة بينا نعمة وكل ضحكة منك حياة🥺</p>
+    <button onclick="goToGallery()">ادخلي جوه قلبي 🤍</button>
+  </div>
+</div>
+
+<!-- شاشة الصور -->
+<div class="screen" id="screen3">
+  <div class="gallery">
+    <!-- الصور ستولد بالـ HTML مباشرة -->
+    <div class="photo">
+      <img src="ahmed.jpeg" alt="">
+      <p>أول ذكرى جميلة ❤️<br>ضحكتك كانت سبب سعادتي 😍<br>اليوم ده حسيت إنك نصيبي 💖 
+        <br>كان يوم 9/7/2025 😍
+        <br>كان قبل عيد ميلادي بيوم 🥰
+        <br>وانتي اجمل هديه جتلي في حياتي يحياتي🥺
+        <br>
+    </p>
     </div>
-
-    <!-- محتوى الموقع -->
-    <div class="content" id="content">
-        <h1>ذكرياتنا مع بعض 💖</h1>
-        <p>كل يوم معاك كان أجمل يوم في حياتي 😍</p>
-
-        <!-- صورنا -->
-        <h2>صورنا</h2>
-        <div class="photos">
-            <img src="ahmed.jpeg" alt="صورة 1">
-            <img src="images/photo2.jpg" alt="صورة 2">
-            <img src="images/photo3.jpg" alt="صورة 3">
-            <img src="images/photo4.jpg" alt="صورة 4">
-            <img src="images/photo5.jpg" alt="صورة 5">
-            <img src="images/photo6.jpg" alt="صورة 6">
-            <img src="images/photo7.jpg" alt="صورة 7">
-            <img src="images/photo8.jpg" alt="صورة 8">
-            <img src="images/photo9.jpg" alt="صورة 9">
-            <img src="images/photo10.jpg" alt="صورة 10">
-            <img src="images/photo11.jpg" alt="صورة 11">
-            <img src="images/photo12.jpg" alt="صورة 12">
-            <img src="images/photo13.jpg" alt="صورة 13">
-            <img src="images/photo14.jpg" alt="صورة 14">
-            <img src="images/photo15.jpg" alt="صورة 15">
-        </div>
-
-        <!-- رسائل حب -->
-        <h2>رسائل حب</h2>
-        <p>حبي لك أكبر من أي حاجة في الدنيا ❤️</p>
+    <div class="photo">
+      <img src="aya.jpeg" alt="">
+      <p>ضحكتك عندي بالدنيا🌸<br>كل لحظة معاكي ذكرى<br>فاكره طبعا اليوم دا يوم بنهاا لما روحنا قعدنا علي الكورنيش لما انا كنت راجع من التدريب 😘</p>
     </div>
+    <div class="photo">
+      <img src="images/3.jpg" alt="">
+      <p>أجمل أيام حياتي معاك 💖<br>ضحكة منك تكفيني<br>قلبي معاك دايمًا ❤️</p>
+    </div>
+    <div class="photo">
+      <img src="images/4.jpg" alt="">
+      <p>كل لحظة بتمر بحبك 🥰<br>ضحكتك أجمل من أي حاجة<br>أنتي حياتي 🌹</p>
+    </div>
+    <div class="photo">
+      <img src="images/5.jpg" alt="">
+      <p>ضحكتك السبب في سعادتي 😍<br>كل يوم معاك نعمة<br>بحبك فوق كل شيء ❤️</p>
+    </div>
+    <div class="photo">
+      <img src="images/6.jpg" alt="">
+      <p>أجمل لحظات العمر معاك 🌸<br>قلبك دافئ<br>أنتي نصفي الثاني 💖</p>
+    </div>
+    <div class="photo">
+      <img src="images/7.jpg" alt="">
+      <p>ضحكتك تملأ الدنيا 😘<br>كل لحظة بينا فرحة<br>بحبك أكتر وأكتر 💓</p>
+    </div>
+    <div class="photo">
+      <img src="images/8.jpg" alt="">
+      <p>أجمل ذكريات حياتي ❤️<br>كل يوم معاك حلم جميل<br>أنتي روحي 🌹</p>
+    </div>
+    <div class="photo">
+      <img src="images/9.jpg" alt="">
+      <p>ضحكتك منورة قلبي 😍<br>بحبك من كل قلبي<br>أنتي كل حاجة 💖</p>
+    </div>
+    <div class="photo">
+      <img src="images/10.jpg" alt="">
+      <p>كل لحظة معاك سعادة 🌸<br>أنتي حلمي الحقيقي<br>قلبي ليكي ❤️</p>
+    </div>
+    <div class="photo">
+      <img src="images/11.jpg" alt="">
+      <p>أجمل أيام العمر 💖<br>ضحكتك تفرح قلبي<br>بحبك دايمًا 🥰</p>
+    </div>
+    <div class="photo">
+      <img src="images/12.jpg" alt="">
+      <p>كل لحظة معاكي نعمة ❤️<br>ضحكتك أجمل موسيقى<br>أنتي حياتي 🌹</p>
+    </div>
+    <div class="photo">
+      <img src="images/13.jpg" alt="">
+      <p>ضحكتك تنور أيامي 😘<br>بحبك أكتر من أي شيء<br>أنتي نصفي الثاني 💖</p>
+    </div>
+    <div class="photo">
+      <img src="images/14.jpg" alt="">
+      <p>كل لحظة معاك فرحة 🌸<br>أجمل أيام حياتي<br>قلبي ليكي ❤️</p>
+    </div>
+    <div class="photo">
+      <img src="images/15.jpg" alt="">
+      <p>أجمل ذكرى ❤️<br>ضحكتك تملأ قلبي<br>بحبك دايمًا 💓</p>
+    </div>
+  </div>
+</div>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
