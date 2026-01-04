@@ -20,7 +20,7 @@ function checkPassword() {
     errorMsg.textContent = "";
     showScreen(screen2);
   } else {
-    errorMsg.textContent = "الباسورد غلط 😢";
+    errorMsg.textContent = "الباسورد غلط مش عارفه باسورد حياتنا😢";
   }
 }
 
